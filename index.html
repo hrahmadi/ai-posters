@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>پوسترهای هوش مصنوعی</title>
+<meta name="description" content="چرا پوسترهایی که با هوش مصنوعی ساخته می‌شوند همه شبیه هم‌اند و چطور با نام بردن از یک سبک مشخص از این قالب تکراری بیرون بیاییم.">
+<meta property="og:title" content="همه‌جا همه‌ی پوسترها شبیه هم شده‌اند">
+<meta property="og:description" content="یک آگهی ساده، چهارده سبک. از مکتب هرات تا پاپ‌آرت، با پرامپت هر پوستر.">
+<meta property="og:image" content="img/pet-slop-2.webp">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1626; --band:#131d31; --card:#18233a; --line:#26324a;
+  --ink:#e7ebf1; --muted:#97a1b2; --accent:#8fa2ff; --accent-ink:#0e1626;
+  --code:#0a101c; --chip:#1f2b44; --tile-shadow:#e7ebf1;
+  --shadow:0 2px 6px rgba(0,0,0,.35),0 14px 40px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#f3f4f6; --band:#ffffff; --card:#ffffff; --line:#e1e4ea;
+  --ink:#17202e; --muted:#5c6575; --accent:#2f45c9; --accent-ink:#ffffff;
+  --code:#f3f4f6; --chip:#eceff3; --tile-shadow:#17202e;
+  --shadow:0 1px 3px rgba(23,32,46,.08),0 10px 30px rgba(23,32,46,.10);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;font-size:18px;line-height:2}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-underline-offset:4px}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+.wide{max-width:1180px;margin:0 auto;padding:0 16px}
+
+header.hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+.kicker{display:inline-block;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:12px}
+h1{font-size:clamp(32px,6vw,58px);line-height:1.4;font-weight:900;margin:0 0 20px}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:20px;color:var(--muted);margin:0 0 24px;max-width:36em}
+.meta{font-size:14px;color:var(--muted)}
+.hero-strip{display:flex;justify-content:safe center;align-items:center;gap:12px;margin-top:44px;height:200px;overflow-x:auto;overflow-y:hidden}
+.hero-strip img{height:100%;width:auto;max-width:none;border-radius:6px;box-shadow:var(--shadow);cursor:zoom-in}
+.strip-cap{text-align:center;font-size:14px;color:var(--muted);margin:14px 0 0}
+
+section{padding:64px 0}
+section.band{background:var(--band);border-block:1px solid var(--line)}
+h2{font-size:clamp(24px,3.4vw,32px);line-height:1.5;font-weight:800;margin:0 0 16px}
+h2.ch{display:flex;align-items:center;gap:18px;margin-bottom:24px}
+h2.ch .n{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:14px;background:var(--accent);color:var(--accent-ink);font-size:28px;font-weight:900;line-height:1;transform:rotate(-6deg);box-shadow:-5px 5px 0 var(--tile-shadow)}
+p{margin:0 0 1.1em}
+blockquote{margin:32px 0;padding:4px 20px 4px 0;border-right:4px solid var(--accent);font-size:21px;font-weight:600;line-height:1.9}
+figure{margin:32px 0}
+figcaption{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.8}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 24px;padding:0;list-style:none}
+.chips li{background:var(--chip);border:1px solid var(--line);border-radius:99px;padding:2px 14px;font-size:15px}
+
+.slop{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start}
+.slop img{border-radius:6px;box-shadow:var(--shadow);cursor:zoom-in;width:100%;height:auto}
+
+.split{display:grid;grid-template-columns:280px 1fr;gap:36px;align-items:start}
+.split figure{margin:0}
+.split img{border-radius:8px;box-shadow:var(--shadow);cursor:zoom-in;width:100%;height:auto}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--chip);color:var(--ink);margin-bottom:8px}
+
+.sec-head{max-width:680px;margin-bottom:28px}
+.sec-head p{color:var(--muted);margin:0}
+.stories{display:flex;flex-direction:column;gap:28px;max-width:980px;margin:0 auto}
+.card.story{display:grid;grid-template-columns:320px 1fr}
+.card.story .body{padding:28px 32px}
+.card.story h3{font-size:22px;margin-top:4px}
+.card.story .en{font-size:13px}
+.story-text{font-size:18px;line-height:2.05;color:var(--ink);margin:16px 0 22px}
+.card.story .actions{margin-top:auto;max-width:360px}
+.more{max-width:980px;margin:64px auto 28px;font-size:20px;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card .shot{all:unset;cursor:zoom-in;display:block;position:relative}
+.card .shot img{aspect-ratio:678/1024;object-fit:cover;width:100%;height:auto;transition:transform .35s}
+.card .shot:hover img,.card .shot:focus-visible img{transform:scale(1.03)}
+.card .shot:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.badge{position:absolute;top:10px;right:10px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:800;padding:2px 10px;border-radius:99px;line-height:1.8}
+.badge.warn{background:#e7ebf1;color:#0e1626}
+.card .body{padding:14px 16px 16px;line-height:1.8;display:flex;flex-direction:column;flex:1}
+.card .num{font-size:12px;font-weight:700;color:var(--accent)}
+.card h3{font-size:17px;margin:2px 0 0;font-weight:800}
+.card .en{font-size:12px;color:var(--muted);direction:ltr;text-align:right}
+.card .note{font-size:14px;color:var(--muted);margin:8px 0 14px}
+.actions{margin-top:auto;display:flex;gap:8px}
+.btn{font:700 13px Vazirmatn,sans-serif;border-radius:8px;padding:7px 12px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink);line-height:1.6}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);flex:1}
+.btn:hover{filter:brightness(1.12)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card pre{display:none;margin:12px 0 0;padding:12px;background:var(--code);border-radius:8px;font:13px/1.9 Vazirmatn,sans-serif;white-space:pre-wrap;max-height:320px;overflow:auto;color:var(--ink)}
+.card pre[dir=ltr]{text-align:left;font-size:12.5px}
+.card.open pre{display:block}
+
+ol.lessons{list-style:none;padding:0;margin:0;counter-reset:l}
+ol.lessons li{counter-increment:l;position:relative;padding:0 56px 0 0;margin-bottom:26px}
+ol.lessons li::before{content:counter(l,persian);position:absolute;right:0;top:2px;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:800;display:grid;place-items:center;line-height:1}
+ol.lessons strong{display:block;font-size:19px}
+
+.theme-btn{position:fixed;top:16px;left:16px;z-index:10;display:flex;align-items:center;gap:8px;font:700 13px Vazirmatn,sans-serif;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:6px 14px 6px 10px;cursor:pointer;box-shadow:var(--shadow)}
+.theme-btn svg{width:18px;height:18px}
+.theme-btn .sun{display:none}
+:root[data-theme="light"] .theme-btn .sun{display:block}
+:root[data-theme="light"] .theme-btn .moon{display:none}
+.theme-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+footer{border-top:1px solid var(--line);padding:32px 0 56px;font-size:14px;color:var(--muted)}
+
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,720px);max-height:92vh}
+dialog::backdrop{background:rgba(5,9,16,.92)}
+dialog img{max-height:86vh;width:auto;margin:0 auto;border-radius:8px}
+dialog p{color:var(--ink);text-align:center;font-size:15px;margin:10px 0 0}
+.lb-btn{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer}
+.lb-prev{right:16px}.lb-next{left:16px}
+.lb-close{position:fixed;top:16px;left:16px;background:rgba(255,255,255,.12);color:#fff;border:0;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);font-weight:700;font-size:14px;padding:8px 18px;border-radius:99px;opacity:0;transition:.25s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:900px){.card.story{grid-template-columns:260px 1fr}.card.story .body{padding:20px 22px}.grid,.grid.three{grid-template-columns:repeat(3,1fr)}.split{grid-template-columns:220px 1fr}}
+@media (max-width:640px){
+  body{font-size:17px}
+  header.hero{padding:44px 0 28px}
+  .hero-strip{justify-content:flex-start;overflow-x:auto;height:200px;scroll-snap-type:x mandatory;padding-bottom:6px}
+  .hero-strip img{scroll-snap-align:center}
+  h2.ch .n{width:46px;height:46px;font-size:23px;border-radius:12px}
+  .theme-btn .lbl{display:none}
+  .theme-btn{padding:8px}
+  .slop{grid-template-columns:repeat(2,1fr)}
+  .slop img:last-child{grid-column:span 2}
+  .split{grid-template-columns:1fr}
+  .split figure{max-width:300px;margin:0 auto}
+  .grid,.grid.three{grid-template-columns:repeat(2,1fr);gap:16px 12px}
+  .card .body{padding:10px 12px 12px}
+  .card.story{grid-template-columns:1fr}
+  .card.story .shot{max-width:340px;width:100%;margin:0 auto}
+  .card.story .body{padding:16px 16px 18px}
+  .card.story .actions{flex-direction:row;max-width:none}
+  .story-text{font-size:17px}
+  .more{margin-top:44px}
+  .card .note{display:none}
+  .actions{flex-direction:column;margin-top:10px}
+  .lb-btn{display:none}
+}
+</style>
+</head>
+<body>
+<script>var s=null;try{s=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",s||"light")</script>
+<button class="theme-btn" type="button" id="themeBtn" aria-label="تغییر تم روشن و تیره">
+  <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  <span class="lbl">تم روشن</span>
+</button>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">طراحی · هوش مصنوعی</span>
+    <h1>همه‌جا همه‌ی پوسترها <em>شبیه هم شده‌اند</em></h1>
+    <p class="lede">یک آگهی ساده‌ی پت‌شاپ را برداشتم و از هوش مصنوعی خواستم آن را در چهارده سبک مختلف بسازد. نتیجه نشان می‌دهد مشکل از ابزار نیست، از درخواستی است که به آن می‌دهیم.</p>
+    <div class="meta">زمان مطالعه: ۶ دقیقه · برگرفته از ایده‌ی <a href="https://john.hartnup.uk/2026/06/07/ai-event-posters.html" rel="noopener">جان هارتناپ</a></div>
+  </div>
+  <div class="wide">
+    <div class="hero-strip">
+      <img src="img/pet-slop-1.webp" alt="پوستر یک پت‌شاپ ساخته‌شده با هوش مصنوعی">
+      <img src="img/pet-slop-2.webp" alt="پوستر یک پت‌شاپ ساخته‌شده با هوش مصنوعی">
+      <img src="img/slop-6.webp" alt="پوستر اولیه‌ی پت‌شاپ هلوپت">
+      <img src="img/pet-slop-3.webp" alt="پوستر یک پت‌شاپ ساخته‌شده با هوش مصنوعی">
+      <img src="img/pet-slop-4.webp" alt="پوستر یک پت‌شاپ ساخته‌شده با هوش مصنوعی">
+    </div>
+    <p class="strip-cap">پنج پت‌شاپ مختلف، یک پوستر.</p>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <h2 class="ch"><span class="n">۱</span>همه‌جا همه‌ی پوسترها شبیه هم شده‌اند</h2>
+    <p>این روزها کافی است چند دقیقه در کانال‌های تلگرام، استوری‌های اینستاگرام یا خیابان‌های شهر بچرخید. پوستر همایش، رونمایی کتاب، نمایشگاه، تخفیف فروشگاه. همه با هوش مصنوعی ساخته شده‌اند و همه شبیه به هم هستند. برگ‌های سبز در گوشه‌ها، نور طلایی، خطوط پرتووار کارتونی، نوارهای قلم‌مویی پشت کلمه‌ها، ترکیب چند زبان بصری ناسازگار، پر کردن تمام فضاهای خالی با آیکون و استیکر و تزئینات بی‌هدف.</p>
+    <p>وجود این عناصر به‌خودی‌خود نشانه‌ی طراحی بد نیست. مشکل زمانی ایجاد می‌شود که مدل آن‌ها را به‌صورت پیش‌فرض و بدون دلیل طراحی به کار می‌برد. هدف این نیست که همه‌ی پوسترها مینیمال باشند. هر عنصر باید از سبک انتخاب‌شده و هدف پوستر ناشی شود، نه از عادت‌های تکراری مدل.</p>
+    <p>از طرف دیگر، وقتی همه‌ی پوسترها کم‌وبیش شبیه به هم می‌شوند، چشم عادت می‌کند سریع از آن‌ها رد شود و توجهی نکند. این درست برعکس چیزی است که می‌خواهیم. ما می‌خواهیم مردم به پوستر ما توجه کنند.</p>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="slop">
+        <img src="img/slop-1.webp" alt="پوستر رونمایی کتاب ساخته‌شده با هوش مصنوعی" loading="lazy">
+        <img src="img/slop-2.webp" alt="پوستر همایش فلسفه برای کودکان" loading="lazy">
+        <img src="img/slop-3.webp" alt="پوستر نمایشگاه صنایع دستی" loading="lazy">
+        <img src="img/slop-4.webp" alt="پوستر رویداد دانشگاهی" loading="lazy">
+        <img src="img/slop-5.webp" alt="پوستر نمایشگاه ترویج علم" loading="lazy">
+      </div>
+      <figcaption>چند پوستر واقعی که فقط در یک هفته به دستم رسید. موضوع‌ها هیچ ربطی به هم ندارند و زبان بصری کم‌وبیش یکی است.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <figure>
+      <img src="img/slop-7.webp" alt="بیلبورد یک فروشگاه در خیابان" loading="lazy" style="border-radius:8px;box-shadow:var(--shadow);margin:0 auto;max-height:560px;width:auto;cursor:zoom-in" data-zoom>
+      <figcaption style="text-align:center">و حالا روی بیلبوردهای شهر هم.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="ch"><span class="n">۲</span>آزمایش: یک آگهی معمولی</h2>
+    <div class="split">
+      <figure>
+        <span class="tag">پوستر اصلی</span>
+        <img src="img/slop-6.webp" alt="پوستر اولیه‌ی هلوپت، شلوغ و پر از متن" data-zoom loading="lazy">
+        <figcaption>دوازده تکه اطلاعات برای یک پیام.</figcaption>
+      </figure>
+      <div>
+        <p>برای اینکه ببینم می‌شود از این قالب بیرون آمد یا نه، یک سفارش واقعی را انتخاب کردم: پوستر «آفرهای ویژه» برای پت‌شاپ هلوپت. پوستر اولیه درست همان چیزی بود که انتظارش را دارید. پر از متن، پر از آیکون، پر از نارنجی، و یک عکس سگ و گربه که انگار از هر بانک تصویری می‌توانست آمده باشد.</p>
+        <blockquote>هوش مصنوعی وقتی سبکی را نمی‌شناسد، میانگین همه‌ی سبک‌ها را تحویل می‌دهد. و میانگین همیشه بی‌خاصیت و بی‌هویت است.</blockquote>
+        <p>پس به‌جای صفت‌های کلی مثل «زیبا» یا «مدرن»، برای هر پوستر یک سبک مشخص را نام بردم. در همه‌ی پرامپت‌ها سه چیز ثابت ماند: فقط عنوان، لوگو، سایت و شماره تلفن حفظ شود. فضای خالی برای اطلاعات بعدی بماند. و فهرستی روشن از چیزهایی که نمی‌خواهم.</p>
+        <p>پرامپت کامل هر پوستر زیر تصویرش است.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="persian">
+  <div class="wide">
+    <div class="sec-head">
+      <h2 class="ch"><span class="n">۳</span>از هنر ایران</h2>
+      <p>اول سراغ سنت تصویری خودمان رفتم. از نگارگری مکتب هرات تا گرافیک مدرن دهه‌های ۴۰ و ۵۰ و هنرمندانی مثل سهراب سپهری، لیلی متین‌دفتری، مارکوس گریگوریان و مونیر فرمانفرمائیان.</p>
+    </div>
+    <div class="stories" id="stories"></div>
+    <p class="more">در ادامه یک‌سری طرح‌های ایرانی و بین‌المللی دیگر:</p>
+    <div class="grid" id="grid-persian"></div>
+  </div>
+</section>
+
+<section id="intl" class="band">
+  <div class="wide">
+    <div class="sec-head">
+      <h2 class="ch"><span class="n">۴</span>سبک‌های بین‌المللی</h2>
+      <p>بعد همان آگهی را به جریان‌های شناخته‌شده‌ی طراحی گرافیک جهان سپردم. از مینیمالیسم ژاپنی تا سایکدلیک دهه‌ی شصت.</p>
+    </div>
+    <div class="grid three" id="grid-intl"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="ch"><span class="n">۵</span>چیزهایی که یاد گرفتم</h2>
+    <ol class="lessons">
+      <li><strong>اسم ببرید، توصیف نکنید.</strong>«مکتب هرات» یا «مینیمالیسم ژاپنی» برای مدل معنای دقیقی دارد. «شیک و جذاب» هیچ معنایی ندارد. نام یک هنرمند یا یک دوره حتی دقیق‌تر است.</li>
+      <li><strong>بگویید چه چیزی نمی‌خواهید.</strong>فهرست «از این موارد استفاده نکن» به اندازه‌ی خود سبک مهم است. رد قلم‌مو، آیکون‌های پراکنده و افکت سه‌بعدی را به‌صراحت ممنوع کنید، وگرنه دوباره سر و کله‌شان پیدا می‌شود.</li>
+      <li><strong>هر بار از نو شروع کنید.</strong>اگر در یک گفت‌وگو چند سبک را پشت سر هم امتحان کنید، جزئیات پوسترهای قبلی به بعدی‌ها نشت می‌کند. برای هر سبک یک گفت‌وگوی تازه باز کنید.</li>
+      <li><strong>متن را کم کنید.</strong>پوستری که دوازده پیام دارد، هیچ پیامی ندارد. قبل از نوشتن پرامپت تصمیم بگیرید مخاطب فقط باید یک چیز را به خاطر بسپارد.</li>
+      <li><strong>فضای خالی را جدی بگیرید.</strong>فضای خالی یعنی جایی که هیچ تزئین و عنصری در آن نیست. همین فضاست که چشم را به سمت نام برند و پیام اصلی می‌برد. مدل‌ها عادت دارند هر گوشه‌ی خالی را با چیزی پر کنند، پس در پرامپت به‌صراحت بخواهید که بخشی از پوستر خالی بماند.</li>
+    </ol>
+    <p style="margin-top:32px">نتیجه‌ها هنوز برای یک چشم دقیق «ساخت هوش مصنوعی» به نظر می‌رسند. اما دست‌کم دیگر شبیه هزار پوستر دیگر نیستند، و در دنیایی که همه از یک ابزار استفاده می‌کنند، همین تفاوت کم نیست.</p>
+    <p>و یک نکته‌ی آخر برای صاحبان کسب‌وکار. هوش مصنوعی ابزار خوبی برای شروع و آزمایش ایده‌هاست، ولی جای یک طراح گرافیک واقعی را نمی‌گیرد. همکاری با یک طراح شاید کمی گران‌تر تمام شود، اما در درازمدت به برند شما هویتی می‌دهد که با یک پرامپت به دست نمی‌آید، و این هزینه به‌مرور جبران می‌شود.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    ایده‌ی این نوشته برگرفته از مقاله‌ی <a href="https://john.hartnup.uk/2026/06/07/ai-event-posters.html" rel="noopener">AI event posters</a> نوشته‌ی جان هارتناپ است. نمونه‌ها، پرامپت‌ها و متن فارسی، بازسازی مستقل برای مخاطب ایرانی است.
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="نمایش تصویر">
+  <button class="lb-close" type="button" aria-label="بستن">✕</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="قبلی">›</button>
+  <button class="lb-btn lb-next" type="button" aria-label="بعدی">‹</button>
+  <img alt=""><p></p>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const BASE = `پوستر پیوست‌شده را با سبک گرافیکی مشخص‌شده بازطراحی کن. فقط عنوان «آفرهای ویژه پت شاپ هلوپت»، لوگوی اصلی، آدرس سایت و شماره تلفن را حفظ کن. سایر نوشته‌ها را حذف کن و فضای خالی کافی برای افزودن اطلاعات در آینده باقی بگذار. از تزئینات بی‌هدف و کلیشه‌های رایج پوسترهای هوش مصنوعی پرهیز کن. هویت برند حفظ شود.`;
+
+const persian = [
+{ id:"01", name:"گرافیک مدرنیستی ایران، دهه‌های ۴۰ و ۵۰", en:"Iranian modernist graphics, 1960s–70s",
+  note:"فرم‌های هندسی دقیق، سیلوئت‌های قوی و پالت محدود نارنجی، کرم و مشکی.",
+  prompt:`پوستر پیوست‌شده را با الهام از گرافیک مدرنیستی ایران در دهه‌های ۱۳۴۰ و ۱۳۵۰ بازطراحی کن. از منطق بصری پوسترهای فرهنگی و تجاری آن دوره الهام بگیر. هدف این است که یک پوستر ساده با کلمات کمتر و طرح گرافیکی جسورانه و هوشمندانه و دارای شخصیت باشد نه شلوغ و بیش از حد تزیینی
+
+**زبان بصری**
+
+از فرم‌های هندسی ساده و دقیق، تصویرسازی تخت، سیلوئت‌های قوی، خطوط کنترل‌شده و پالت رنگی محدود استفاده کن. نارنجی، کرم و مشکی را در ترکیبی متعادل به کار ببر. طراحی باید جسورانه، هوشمندانه و دارای شخصیت باشد، نه شلوغ یا بیش‌ازحد تزئینی.
+
+**از این موارد استفاده نکن:**
+
+- رد قلم‌مو، لکه‌های رنگی نامنظم و نوارهای رنگی با لبه‌های پاشیده‌شده
+- خطوط انفجاری، علامت‌های تعجب تصویری، قلب‌ها، تاج‌ها و تزئینات پراکنده
+- آیکون‌ها و نمادهای تزئینی که نقش مشخصی در ترکیب‌بندی ندارند
+- ظاهر کارتونی سه‌بعدی، سبک تصویرسازی آماده و قالب‌های متداول پوسترهای تولیدشده با هوش مصنوعی` },
+{ id:"02", name:"چاپ قلمکار", en:"Qalamkar block printing, Isfahan",
+  note:"نقش‌های مهرزده با قالب چوبی، بافت جوهر و ناهماهنگی ظریف چاپ دستی.",
+  prompt:`${BASE}
+
+با الهام از چاپ قلمکار اصفهان، از نقش‌های مهرزده با قالب چوبی، فرم‌های گرافیکی ضخیم، رنگ‌های محدود، بافت واقعی جوهر و ناهماهنگی ظریف چاپ دستی استفاده کن. حس چاپ فیزیکی داشته باشد، نه افکت کهنگی دیجیتال.` },
+{ id:"03", name:"مکتب هرات", en:"Herat school of Persian painting",
+  note:"خطوط ظریف و رنگ‌های غنی نگارگری، به زبان تصویرسازی امروز.",
+  prompt:`پوستر پیوست‌شده را با الهام از مکتب هرات در نگارگری ایرانی بازطراحی کن. از خطوط ظریف، رنگ‌های غنی، فرم‌های دقیق و ترکیب‌بندی متعادل نگاره‌های هرات استفاده کن و آن را به تصویرسازی گرافیکی معاصر تبدیل کن.
+
+حیوانات را با فرم‌های تخت و ظریف تصویرسازی کن. ۲ گربه و ۲ سگ. ترکیب‌بندی خلوت باشد و فضای خالی کافی داشته باشد.
+
+فقط عنوان «آفرهای ویژه پت شاپ هلوپت»، لوگو، آدرس سایت و شماره تلفن را حفظ کن. سایر نوشته‌ها را حذف کن.
+
+از قاب‌های تزئینی شلوغ، طلاکاری اغراق‌شده، گرادیان، رد قلم‌مو و عناصر پراکنده پرهیز کن. پوستر عمودی با طراحی منسجم و امروزی.` },
+{ id:"04", name:"تصویرسازی کتاب و نشریات ایران، دهه‌های ۴۰ تا ۶۰", en:"Iranian book & magazine illustration",
+  note:"فرم‌های ساده و گویا، رنگ‌های تخت و حیوان‌هایی با شخصیت.",
+  prompt:`پوستر پیوست‌شده را با الهام از تصویرسازی مدرن کتاب‌ها و نشریات ایران در دهه‌های ۱۳۴۰ تا ۱۳۶۰ بازطراحی کن. از فرم‌های ساده و گویا، سیلوئت‌های قدرتمند، رنگ‌های تخت و تصویرسازی استعاری استفاده کن. حیوانات را با شخصیت بصری متمایز و خطوطی دقیق تصویرسازی کن. ۲ گربه و ۲ سگ
+
+فقط عنوان «آفرهای ویژه پت شاپ هلوپت»، لوگو، آدرس سایت و شماره تلفن را حفظ کن. ترکیب‌بندی خلوت باشد و فضای خالی کافی برای اضافه کردن اطلاعات در آینده داشته باشد.
+
+از ظاهر کارتونی سه‌بعدی، شخصیت‌های کلیشه‌ای، تزئینات پراکنده و بافت‌های مصنوعی پرهیز کن. نتیجه باید شبیه یک تصویرسازی خلاقانه در یک نشریه هنری ایرانی باشد.` },
+{ id:"05", name:"مینیمالیسم ایرانی", en:"Lili Matin-Daftari · Marcos Grigorian", badge:"محبوب من",
+  note:"الهام از متین‌دفتری و خاک‌کاری‌های گریگوریان. حداقل عناصر، بیشترین شخصیت.",
+  prompt:`پوستر پیوست‌شده را با الهام از مینیمالیسم ایرانی، آثار لیلی متین‌دفتری و مجموعه خاک‌کاری مارکوس گریگوریان بازطراحی کن.
+
+از فرم‌های تخت و ساده، رنگ‌های محدود، فضای خالی گسترده و بافت‌های طبیعی خاک و گل الهام بگیر. حیوانات را به شکل‌های هندسی و نمادین تقلیل بده، به‌گونه‌ای که تصویر با حداقل عناصر، شخصیت داشته باشد. از رنگ‌های کرم، خاکی، قهوه‌ای و نارنجی به‌صورت محدود استفاده کن.
+
+فقط عنوان «آفرهای ویژه پت شاپ هلوپت»، لوگو، آدرس سایت و شماره تلفن را حفظ کن. ترکیب‌بندی خلوت باشد و فضای خالی کافی برای اضافه‌کردن اطلاعات در آینده باقی بماند.
+
+از تزئینات، نقوش سنتی، آیکون‌های پراکنده، رد قلم‌مو، گرادیان و افکت‌های سه‌بعدی پرهیز کن. هر عنصر باید ضروری باشد. نتیجه باید آرام، مینیمال و دارای هویت هنری ایرانی باشد، نه یک پوستر تبلیغاتی متداول هوش مصنوعی.` },
+{ id:"06", name:"سهراب سپهری", en:"Sohrab Sepehri abstraction",
+  note:"خطوط ارگانیک کم‌تعداد و فضای خالی به‌عنوان بخش اصلی ترکیب‌بندی.",
+  prompt:`پوستر پیوست‌شده را با الهام از نقاشی‌های انتزاعی سهراب سپهری بازطراحی کن. از خطوط ارگانیک و کم‌تعداد، فرم‌های ساده و رنگ‌های خاکی در کنار نارنجی برند استفاده کن. حیوانات را با چند خط و شکل تختِ گویا تصویرسازی کن و فضای خالی را بخش اصلی ترکیب‌بندی قرار بده.
+
+فقط عنوان «آفرهای ویژه پت شاپ هلوپت»، لوگو، آدرس سایت و شماره تلفن را حفظ کن. سایر نوشته‌ها را حذف کن و فضای خالی کافی برای اضافه‌کردن اطلاعات در آینده باقی بگذار.
+
+از تزئینات، رد قلم‌موهای نمایشی، آیکون‌های پراکنده و افکت‌های سه‌بعدی پرهیز کن. نتیجه باید آرام، مینیمال و دارای شخصیت هنری باشد.` },
+{ id:"07", name:"مونیر فرمانفرمائیان", en:"Monir Farmanfarmaian geometry",
+  note:"چندضلعی‌های دقیق، تقارن کنترل‌شده و هندسه‌ی برآمده از هنر ایرانی.",
+  prompt:`پوستر پیوست‌شده را با الهام از انتزاع هندسی آثار مونیر فرمانفرمائیان بازطراحی کن. از چندضلعی‌های دقیق، تقارن کنترل‌شده، فرم‌های تخت و هندسه الهام‌گرفته از هنر ایرانی استفاده کن. حیوانات را به شکل‌های هندسی ساده و متمایز تبدیل کن. پالت رنگی محدود نارنجی، کرم و مشکی باشد.
+
+فقط عنوان «آفرهای ویژه پت شاپ هلوپت»، لوگو، آدرس سایت و شماره تلفن را حفظ کن. سایر نوشته‌ها را حذف کن و فضای خالی کافی برای اضافه‌کردن اطلاعات در آینده باقی بگذار.
+
+از آینه‌کاری براق، قاب‌های تزئینی، الگوهای پیچیده و عناصر پراکنده پرهیز کن. نتیجه باید یک پوستر گرافیکی معاصر با هندسه دقیق، ترکیب‌بندی منسجم و هویت ایرانی باشد.` },
+{ id:"13", name:"نگارگری بهزاد", en:"Behzad, Iskandarnama miniature", badge:"زیادی شلوغ", warn:true, ltr:true,
+  note:"گربه‌ای با ردای سبز و سگی با ردای نارنجی در معماری اسکندرنامه. بامزه است، ولی برای پوستر بیش از حد شلوغ.",
+  prompt:`Reimagine the described Iskandarnama miniature associated with Kamal-ud-Din Behzad as a **Persian miniature about cats and dogs**, inspired by the Herat school of miniature painting.
+
+Preserve the original's intricate multi-level architecture, zigzagging staircase, blue-tiled arches, balconies, small domes, and flattened layered perspective.
+
+Replace the two central human figures with a graceful cat in a vivid green robe, standing on the raised platform, and a dignified dog in an orange-red robe, seated opposite and looking up at the cat. Populate a few doorways, stairs, and balconies with smaller cats and dogs, integrated naturally into the scene.
+
+Use traditional Persian miniature techniques: fine controlled outlines, intricate patterns, flat perspective, carefully arranged figures, and rich lapis blue, turquoise, vermilion, green, cream, and gold. The result should feel like an authentic illustrated manuscript, not a modern cartoon or a digitally rendered fantasy scene.
+
+Keep the architectural details richly ornamented but compositionally balanced. Avoid photorealism, 3D effects, modern props, and random decorative elements.
+
+Adapt the scene into the Holoopet poster. Preserve the original logo and the exact Persian headline «آفرهای ویژه پت شاپ هلوپت», website, and phone number. Remove other text and calligraphy, leaving a clean, intentional area of negative space for additional information.
+
+**The animals must inhabit the miniature's world as its natural protagonists, not look like modern pet photographs pasted into a historical painting.**` }
+];
+
+const intl = [
+{ id:"08", name:"مینیمالیسم ژاپنی", en:"Japanese minimalism",
+  note:"یک خورشید، دو سایه و فضای خالی گسترده. ترکیب‌بندی نامتقارن.",
+  prompt:`از زیبایی‌شناسی مینیمالیسم ژاپنی الهام بگیر. یک تصویر ساده و معنادار از حیوانات، فضای خالی گسترده، ترکیب‌بندی نامتقارن و پالت محدود کرم، نارنجی و مشکی. هر عنصر اضافی را حذف کن.
+${BASE}` },
+{ id:"09", name:"ممفیس", en:"Memphis · corporate Memphis",
+  note:"فرم‌های هندسی بازیگوش، زیگزاگ و رنگ‌های متضاد، ولی حساب‌شده.",
+  prompt:`پوستر پیوست‌شده را با سبک گرافیکی مشخص‌شده بازطراحی کن.
+make the animals in the image corporate memphis 2d art style that features minimalism, flat elements, bright, solid colors, and cartoon-like figures
+از طراحی پست‌مدرن گروه ممفیس در دهه ۱۹۸۰ الهام بگیر. از فرم‌های هندسی بازیگوش، خطوط زیگزاگ، رنگ‌های متضاد و ترکیب‌بندی نامتقارن استفاده کن. عناصر را محدود و حساب‌شده نگه دار تا پوستر به مجموعه‌ای از تزئینات تصادفی تبدیل نشود.
+
+فقط عنوان «آفرهای ویژه پت شاپ هلوپت»، لوگوی اصلی، آدرس سایت و شماره تلفن را حفظ کن. سایر نوشته‌ها را حذف کن و فضای خالی کافی برای افزودن اطلاعات در آینده باقی بگذار. از تزئینات بی‌هدف و کلیشه‌های رایج پوسترهای هوش مصنوعی پرهیز کن. هویت برند حفظ شود.` },
+{ id:"10", name:"کلاژ ادیتوریال", en:"Editorial art collage", ltr:true,
+  note:"کاغذ بریده، تکه‌های عکس و لایه‌های حساب‌شده. مثل یک مجله‌ی هنری مستقل.",
+  prompt:`Redesign the attached pet-shop poster in **editorial art collage style**.
+
+Combine cut-paper shapes, cropped photographic fragments of animals, textured printed paper, and bold geometric forms. Use layered compositions, unexpected scale, and a limited palette of orange, cream, and black. Make the result feel like a carefully art-directed independent art magazine, not a generic scrapbook.
+
+Keep only the exact Persian headline «آفرهای ویژه پت شاپ هلوپت», the original logo, website, and phone number. Remove all other text and leave generous negative space for additional details.
+
+Use a clear visual hierarchy and intentional overlapping. Every collage element must contribute to the composition.
+
+Avoid random sticker-like decorations, paint-brush swashes, decorative bursts, floating icons, excessive textures, gradients, and 3D effects. Do not fill every empty area.
+
+**The result should feel tactile, expressive, contemporary, and deliberately composed, with a strong central image and plenty of breathing room.**` },
+{ id:"11", name:"بروتالیسم گرافیکی", en:"Graphic design brutalism", ltr:true,
+  note:"گرید نامتقارن، تایپوگرافی بزرگ و بلوک‌های لبه‌تیز. جسور و تقابلی.",
+  prompt:`Redesign the attached poster in **bold graphic design brutalism**. Rebuild the composition from scratch.
+
+**Completely replace the original animal images.** Do not reuse, preserve, or simply rearrange the original animal photos. Redraw the dog and cats as a unified, flat graphic illustration using crude geometric silhouettes, simplified shapes, thick outlines, and sharply contrasting blocks of color. The animals must look like an intentional part of the poster's graphic design, not photos pasted onto it.
+
+Use an asymmetrical grid, oversized typography, hard-edged blocks, strong negative space, and a restricted palette of black, warm cream, and orange. Make the composition bold, confrontational, and deliberately unconventional.
+
+Keep only the exact Persian headline «آفرهای ویژه پت شاپ هلوپت», the original logo, website, and phone number. Remove all other text and leave generous empty space for additional details.
+
+No photorealistic animals, stock-photo cutouts, brush strokes, decorative bursts, floating icons, gradients, shadows, or 3D effects. Do not confuse graphic design brutalism with brutalist architecture.
+
+**Everything must belong to one consistent visual language: typography, animal illustrations, shapes, and layout.**` },
+{ id:"12", name:"سایکدلیک دهه‌ی ۱۹۶۰", en:"1960s psychedelic poster art", ltr:true,
+  note:"موج‌های رنگی، خطوط چاق و حیوان‌هایی با شخصیت. شاد و عجیب.",
+  prompt:`Redesign the attached pet-shop poster in **1960s psychedelic poster art style**.
+
+Completely replace the original animal photos with bold, stylized illustrations of the dog and cats. Give them expressive personalities and integrate them into a playful world of wavy organic shapes, swirling patterns, exaggerated curves, and unexpected color combinations.
+
+Use vivid orange, hot pink, turquoise, yellow, and deep purple. Make the composition energetic and imaginative, with contrasting shapes and a strong visual hierarchy. The animals, typography, and background must share one cohesive visual style.
+
+Keep only the exact Persian headline «آفرهای ویژه پت شاپ هلوپت», the original logo, website, and phone number. Remove all other text and leave generous negative space for additional details.
+
+Avoid photorealistic animals, generic cartoon characters, random decorative stickers, excessive patterns, 3D effects, and illegible psychedelic lettering.
+
+**Make it joyful, weird, colorful, and unmistakably designed—not a generic AI advertisement.**` },
+{ id:"14", name:"پاپ‌آرت اندی وارهول", en:"Andy Warhol-inspired Pop Art", ltr:true,
+  note:"چهار پرتره‌ی چاپ سیلک با رنگ‌های غیرطبیعی و کنتراست بالا.",
+  prompt:`Redesign the attached pet-shop poster in **Andy Warhol-inspired Pop Art**.
+
+Completely replace the original animal photos with bold, flat, high-contrast screen-print portraits of the dog and cats. Use simplified shapes, strong outlines, vivid unnatural colors, and the visual character of vintage pop-art prints. Consider a grid of repeated animal portraits with different color combinations, but keep the overall composition clean and deliberate.
+
+Use a limited palette of vivid orange, hot pink, electric blue, yellow, black, and cream. Make the typography, animal illustrations, and background feel like parts of one cohesive design.
+
+Keep only the exact Persian headline «آفرهای ویژه پت شاپ هلوپت», the original logo, website, and phone number. Remove all other text and leave generous negative space for additional details.
+
+Avoid photorealistic animals, generic cartoon characters, gradients, 3D effects, decorative brush strokes, and random stickers. The result should feel like a bold, screen-printed Pop Art poster, not a standard AI-generated advertisement.` }
+];
+
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const stories = {
+  "02": "اول سراغ چاپ قلمکار اصفهان رفتم. نتیجه زیاد تغییر نکرد. مدل هنوز سعی می‌کند فضاهای خالی را با المان‌های بی‌دلیل پر کند و هنوز ضربه‌ی قلم‌مو پشت عنوان‌ها دیده می‌شود.",
+  "01": "بعد گرافیک مدرنیستی ایران در دهه‌های ۴۰ و ۵۰ را امتحان کردم و نتیجه جالب شد. ترکیب‌بندی منظم‌تر شد و تزئینات اضافه کنار رفت.",
+  "03": "بعد سراغ نگارگری مکتب هرات رفتم. نتیجه جالب شد، ولی برای سلیقه‌ی من هنوز خیلی شلوغ است.",
+  "05": "سبک مینیمالیسم ایرانی، با الهام از کارهای لیلی متین‌دفتری و مارکوس گریگوریان، خیلی بیشتر به سلیقه‌ی من می‌خورد. اگر صاحب این برند بودم، همین پوستر و همین طرح را همه‌جا می‌گذاشتم."
+};
+const storyIds = ["02", "01", "03", "05"];
+const byId = id => persian.find(s => s.id === id);
+const storyList = storyIds.map(byId);
+const restPersian = persian.filter(s => !storyIds.includes(s.id));
+const all = [...storyList, ...restPersian, ...intl];
+const card = (s, i) => `
+  <article class="card${stories[s.id] && i < storyIds.length ? " story" : ""}" data-i="${i}">
+    <button type="button" class="shot" data-zoom-src="img/style-${s.id}.webp" data-cap="${esc(s.name)}" aria-label="بزرگ‌نمایی ${esc(s.name)}">
+      <img src="img/style-${s.id}.webp" alt="پوستر هلوپت به سبک ${esc(s.name)}" loading="lazy" width="678" height="1024">
+      ${s.badge ? `<span class="badge${s.warn ? " warn" : ""}">${s.badge}</span>` : ""}
+    </button>
+    <div class="body">
+      <div class="num">سبک ${fa(i + 1)}</div>
+      <h3>${s.name}</h3>
+      <div class="en">${s.en}</div>
+      ${stories[s.id] && i < storyIds.length ? `<p class="story-text">${stories[s.id]}</p>` : `<p class="note">${s.note}</p>`}
+      <div class="actions">
+        <button type="button" class="btn primary" data-copy="${i}">کپی پرامپت</button>
+        <button type="button" class="btn" data-show aria-expanded="false">نمایش</button>
+      </div>
+      <pre dir="${s.ltr ? "ltr" : "rtl"}">${esc(s.prompt)}</pre>
+    </div>
+  </article>`;
+document.getElementById("stories").innerHTML = storyList.map((s, i) => card(s, i)).join("");
+document.getElementById("grid-persian").innerHTML = restPersian.map((s, i) => card(s, i + storyList.length)).join("");
+document.getElementById("grid-intl").innerHTML = intl.map((s, i) => card(s, i + storyList.length + restPersian.length)).join("");
+
+/* theme */
+const root = document.documentElement, tb = document.getElementById("themeBtn");
+const syncBtn = () => { const light = root.getAttribute("data-theme") === "light"; tb.querySelector(".lbl").textContent = light ? "تم تیره" : "تم روشن"; };
+syncBtn();
+tb.addEventListener("click", () => {
+  const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+  root.setAttribute("data-theme", next); syncBtn();
+  try { localStorage.setItem("theme", next); } catch (e) {}
+});
+
+/* toast */
+const toast = document.getElementById("toast");
+let tt;
+const say = m => { toast.textContent = m; toast.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove("on"), 1600); };
+
+/* copy + show prompt */
+async function copyText(t) {
+  try { await navigator.clipboard.writeText(t); return true; }
+  catch {
+    const ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    let ok = false; try { ok = document.execCommand("copy"); } catch {}
+    ta.remove(); return ok;
+  }
+}
+document.addEventListener("click", async e => {
+  const c = e.target.closest("[data-copy]");
+  if (c) { const ok = await copyText(all[+c.dataset.copy].prompt); say(ok ? "پرامپت کپی شد" : "کپی نشد"); return; }
+  const s = e.target.closest("[data-show]");
+  if (s) { const cardEl = s.closest(".card"); const open = cardEl.classList.toggle("open"); s.textContent = open ? "بستن" : "نمایش"; s.setAttribute("aria-expanded", open); }
+});
+
+/* lightbox */
+const lb = document.getElementById("lb"), lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
+const zoomEls = [...document.querySelectorAll(".hero-strip img,.slop img,[data-zoom],[data-zoom-src]")];
+const items = zoomEls.map(el => ({ src: el.dataset.zoomSrc || el.getAttribute("src"), cap: el.dataset.cap || el.alt || "" }));
+let cur = 0;
+const show = i => { cur = (i + items.length) % items.length; lbImg.src = items[cur].src; lbCap.textContent = items[cur].cap; };
+zoomEls.forEach((el, i) => el.addEventListener("click", () => { show(i); lb.showModal(); }));
+lb.querySelector(".lb-close").onclick = () => lb.close();
+lb.querySelector(".lb-prev").onclick = () => show(cur - 1);
+lb.querySelector(".lb-next").onclick = () => show(cur + 1);
+lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
+document.addEventListener("keydown", e => {
+  if (!lb.open) return;
+  if (e.key === "ArrowLeft") show(cur + 1);
+  if (e.key === "ArrowRight") show(cur - 1);
+});
+</script>
+</body>
+</html>
